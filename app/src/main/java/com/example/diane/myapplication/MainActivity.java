@@ -2,6 +2,7 @@ package com.example.diane.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
@@ -10,6 +11,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextViewAmount;
     private int mAmount = 0;
     Context context = this;
+    private Button button;
+    private  EditText editTextList;
+    public static final String EXTRA_TEXT="com.example.diane.myapplication.EXTRA_TEXT";
 
 
     @Override
@@ -79,8 +85,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity2();
+            }
+        });
+
+        editTextList = findViewById(R.id.edittext_list);
+        editTextList.addTextChangedListener(typeTextWatcher);
 
     }
+
+    private TextWatcher typeTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) { // permet de changer l'apparence du bouton lorqu'on écrit dans le champ
+            String namelistInput = editTextList.getText().toString().trim(); // enlève les éventuels espaces
+
+            // s'il y a du texte dans le champ alors le bouton "suivant" pour passer à l'activité 2 est actif, sinon il est inactif
+            button.setEnabled(!namelistInput.isEmpty());
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 
 
     private void increase(){
@@ -129,5 +165,15 @@ public class MainActivity extends AppCompatActivity {
                 null,
                 GroceryContract.GroceryEntry.COLUMN_TIMESTAMP + " DESC" // éléments nouvellement ajoutés sont en haut de la liste
         );
+    }
+
+    public void openActivity2() {
+        EditText editTextList = (EditText)findViewById(R.id.edittext_list);
+        String text = editTextList.getText().toString();
+
+
+        Intent intent = new Intent(this, Activity2.class);
+        intent.putExtra(EXTRA_TEXT, text); // on passe la variable nom de la liste à l'activité 2
+        startActivity(intent);
     }
 }
