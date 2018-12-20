@@ -1,3 +1,14 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">My Application</string>
+    <string name="nom_de_la_liste">Nom de la liste</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="swipe">Swipper gauche ou droite pour supprimer l_article</string>
+    <string name="suivant">Suiv.</string>
+    <string name="choisir_date_courses">Choisir la date des courses</string>
+    <string name="date">Date</string>
+    <string name="application_liste_courses">Application liste de courses</string>
+    <string name="nom">Diane Banjan TD IHM-Applications Mobiles</string>
+    <string name="saisir">Saisir</string>
+
 </resources>
+

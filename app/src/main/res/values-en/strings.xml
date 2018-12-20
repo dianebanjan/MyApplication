@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="nom_de_la_liste">List name</string>
+    <string name="ajouter">Add</string>
+    <string name="swipe">Swipe left or right to delete item</string>
+    <string name="suivant">Next</string>
+    <string name="choisir_date_courses">Pick shopping date</string>
+    <string name="date">Date</string>
+    <string name="application_liste_courses">Shopping application</string>
+    <string name="nom">"Diane Banjan Mobile Applications "</string>
+    <string name="saisir">Enter item</string>
+</resources>

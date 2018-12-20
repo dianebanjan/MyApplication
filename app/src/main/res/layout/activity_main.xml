@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
         android:layout_below="@id/edittext_list"
-        android:hint="Saisir article"/>
+        android:hint="@string/saisir"/>
 
     <EditText
         android:id="@+id/edittext_list"
@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="7dp"
-        android:hint="Nom de la liste" />
+        android:hint="@string/nom_de_la_liste" />
 
     <TextView
         android:id="@+id/textview_amount"
@@ -73,7 +73,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="-3dp"
-        android:text="Ajouter" />
+        android:text="@string/ajouter" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
@@ -92,7 +92,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginBottom="51dp"
         android:gravity="center_horizontal"
-        android:text="Swipper gauche ou droite pour supprimer l'article"
+        android:text="@string/swipe"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="15dp"
@@ -106,7 +106,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="48dp"
-        android:text="Suiv."
+        android:text="@string/suivant"
         android:textAlignment="center"
         android:enabled="false"/>
 
