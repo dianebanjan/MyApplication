@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="241dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/text"
@@ -21,8 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="97dp"
-        android:text="@string/choisir_date_courses" />
+        android:layout_marginTop="177dp"
+        android:text="@string/date_courses" />
 
     <TextView
         android:id="@+id/textView_Date"
@@ -39,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="159dp"
+        android:layout_marginTop="94dp"
         android:text="@string/date" />
 
 </RelativeLayout>
