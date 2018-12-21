@@ -13,7 +13,7 @@ public class GroceryDBHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(SQLiteDatabase db) { // création de la base de données
         final String SQL_CREATE_GROCERYLIST_TABLE = "CREATE TABLE " +
                 GroceryEntry.TABLE_NAME + " (" +
                 GroceryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +

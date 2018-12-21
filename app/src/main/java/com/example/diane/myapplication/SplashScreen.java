@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class SplashScreen extends AppCompatActivity {
-
+// classe qui introduit l'application avec une image au début et le titre
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +15,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep (4000);
+                    sleep (4000); // l'animation du début dure 4 secondes
                     Intent intent = new Intent (getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                     finish();
@@ -24,6 +24,6 @@ public class SplashScreen extends AppCompatActivity {
                 }
             }
         };
-        myThread.start();
+        myThread.start(); // fermeture du thread et passage au Main Activity
     }
 }

@@ -18,7 +18,7 @@ public class GroceryAdapter extends RecyclerView.Adapter<GroceryAdapter.GroceryV
         mCursor = cursor;
 
     }
-    public class GroceryViewHolder extends RecyclerView.ViewHolder{
+    public class GroceryViewHolder extends RecyclerView.ViewHolder{ // tous les articles sont dans le recycler view
 
 
         public TextView nameText;

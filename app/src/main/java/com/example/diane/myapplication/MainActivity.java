@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-    public void openActivity2() {
+    public void openActivity2() { // méthode qui permet de passer à la page 2
         EditText editTextList = (EditText)findViewById(R.id.edittext_list);
         String text = editTextList.getText().toString();
 
