@@ -11,11 +11,11 @@
         android:id="@+id/edittext_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/edittext_list"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
-        android:layout_below="@id/edittext_list"
-        android:hint="@string/saisir"/>
+        android:hint="@string/saisir_article" />
 
     <EditText
         android:id="@+id/edittext_list"
@@ -32,12 +32,12 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/edittext_name"
         android:layout_alignTop="@+id/edittext_name"
-        android:layout_marginStart="134dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="91dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="0"
-        android:textSize="50sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button_decrease"
@@ -46,7 +46,7 @@
         android:layout_alignTop="@+id/textview_amount"
         android:layout_alignBottom="@+id/textview_amount"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:text="-" />
@@ -59,7 +59,7 @@
         android:layout_alignBottom="@+id/textview_amount"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="120dp"
+        android:layout_marginEnd="121dp"
         android:layout_marginBottom="1dp"
         android:text="+" />
 
@@ -67,12 +67,12 @@
         android:id="@+id/button_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/button_increase"
-        android:layout_alignBottom="@+id/button_increase"
+        android:layout_alignTop="@id/textview_amount"
+        android:layout_alignBottom="@+id/textview_amount"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="-3dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="1dp"
         android:text="@string/ajouter" />
 
     <android.support.v7.widget.RecyclerView
@@ -83,14 +83,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="364dp"
-        android:layout_height="44dp"
+        android:layout_width="359dp"
+        android:layout_height="35dp"
         android:layout_below="@+id/recyclerview"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="2dp"
-        android:layout_marginBottom="51dp"
+        android:layout_marginBottom="87dp"
         android:gravity="center_horizontal"
         android:text="@string/swipe"
         android:textAlignment="center"
@@ -100,14 +100,13 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="76dp"
-        android:layout_height="53dp"
-        android:layout_alignTop="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_add"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="234dp"
+        android:enabled="false"
         android:text="@string/suivant"
-        android:textAlignment="center"
-        android:enabled="false"/>
+        android:textAlignment="center" />
 
 </RelativeLayout>

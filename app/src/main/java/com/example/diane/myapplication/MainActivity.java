@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         editTextList = findViewById(R.id.edittext_list);
         editTextList.addTextChangedListener(typeTextWatcher);
 

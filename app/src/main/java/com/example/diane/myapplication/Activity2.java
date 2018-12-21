@@ -14,6 +14,7 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 public class Activity2 extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,14 @@ public class Activity2 extends AppCompatActivity implements DatePickerDialog.OnD
             public void onClick(View v) {
                 DialogFragment datePicker = new DatePickerFragment();
                 datePicker.show(getSupportFragmentManager(), "date picker"); // permet d'ouvrir le date picker
+            }
+        });
+
+        Button button_back = (Button) findViewById(R.id.button_back);
+        button_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Activity2.this.finish();
             }
         });
 
